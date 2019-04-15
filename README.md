@@ -1,68 +1,49 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+一个初始化的 react 项目搭建
 
-## Available Scripts
+## api 配置
 
-In the project directory, you can run:
+### webpack
 
-### `npm start`
+配置了个路径，支持全局默认路径：“@” 指向 `src` 目录
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### react
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+版本：16.8.3
 
-### `npm test`
+### react-router
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### config router 方式：
 
-### `npm run build`
+基础的 config 文件：`basicConfig.js`，用来写正常跳转的路径
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+例外的 config 文件：`accidentConfig.js`，用来写重定向，不存在正确路径等路由
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### store
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+默认根目录：`index.js`：用来合并 reducer ，对外抛出单独的一个 store
 
-### `npm run eject`
+#### 公共目录：
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+更新数组：`updateItemArray.js`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+更新对象：`updateObject.js`
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### 分页目录
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+每一个文件夹是一个界面 `pages` 目录对应页面的目录名，方便识别
 
-## Learn More
+目录内分 `dispatch.js`、`reducer.js`、`state.js`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ui 配置
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### common
 
-### Code Splitting
+放公共资源
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### component
 
-### Analyzing the Bundle Size
+组件文件夹，方便各页面引用
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### pages
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+页面文件夹，每一个文件夹下面还有当前页面的 `css`、`js`，公共的要放在 `common` 文件夹
