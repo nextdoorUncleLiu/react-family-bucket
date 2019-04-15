@@ -18,7 +18,7 @@
 
 例外的 config 文件：`accidentConfig.js`，用来写重定向，不存在正确路径等路由
 
-### store
+### redux
 
 默认根目录：`index.js`：用来合并 reducer ，对外抛出单独的一个 store
 
